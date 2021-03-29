@@ -6,11 +6,11 @@ mongoose.connect(process.env.DATABASE_URL, {
   useUnifiedTopology: true
 });
 
-// shortcut to mongoose.connection object
+//  shortcut to mongoose.connection object
 const db = mongoose.connection;
 
 db.on('connected', function () {
   console.log(`Connected to MongoDB at ${db.host}:${db.port}`);
 });
 
-// req.body.user= req.body.id
+// // // // req.body.user= req.body.id
