@@ -7,7 +7,7 @@ var session = require('express-session');
 var passport = require('passport');
 var methodOverride = require('method-override');
 
-var indexRouter = require('./routes/index');
+var indexRouter = require('./routes');
 var usersRouter = require('./routes/users');
 
 var app = express();
