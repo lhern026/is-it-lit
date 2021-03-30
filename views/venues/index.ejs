@@ -1,15 +1,41 @@
 <%- include('../partials/header') %>
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to the Jungle</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title>See Soccer Live</title>
+</head>
+<body>
+  <h1>Venue List</h1>
+  <table>
+    <thead>
+      <tr>
+        
+        <th>Stadium Name</th>
+        <th>Location</th>
+        <th>Host Team</th>
+        <th>capacity</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      
+      <% venues.forEach(function(v) { %>
+        <tr>
+          <td><%= v.stadiumName %></td>
+          <td><%= v.location %></td>
+          <td><%= v.hostTeam %></td>
+          <td><%= v.capacity %></td>
+       
+        </tr>
+
+      <% }); %>
+    </tbody>
+  </table>
+</body>
 </html>
 
-
-<%- include('./partials/footer') %>
+<%- include('../partials/footer') %>

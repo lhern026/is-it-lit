@@ -14,10 +14,11 @@ const reviewSchema = new Schema({
 
 
 const venueSchema = new Schema({
+    stadiumName: String,
     location: String,
-    price: Number,
+    hostTeam: String,
     capacity: Number,
-    about: String
+    
 
 });
 

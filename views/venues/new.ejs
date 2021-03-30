@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+<h2>Enter a new venue</h2>
+
+<form action="/venues" method="POST">
+  <label>Stadium name:
+    <input type="text" name="stadiumName">
+  </label><br>
+  <label>Location:
+    <input type="text" name="location">
+  </label><br>
+  <label>Host Team:
+    <input type="text" name="hostTeam">
+  </label><br>
+  <label>Capacity:
+    <input type="number" name="capacity">
+  </label><br>
+  
+  
+  
+  <input type="submit" value="Add Venue">
+</form>
+
+
+
+
+
+
+<%- include('../partials/footer') %>
