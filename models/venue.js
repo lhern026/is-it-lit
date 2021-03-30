@@ -17,9 +17,12 @@ const venueSchema = new Schema({
     stadiumName: String,
     location: String,
     hostTeam: String,
-    capacity: Number,
+    capacity: Number
     
 
+},{
+    timestamps: true
 });
+
 
 module.exports = mongoose.model('Venue', venueSchema);

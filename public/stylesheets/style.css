@@ -1,6 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: lightblue;
 }
 
 a {
@@ -12,8 +13,19 @@ a {
   justify-content: center;
   align-items: center;
   height: 34px;
+  
+  
 }
-
+h1{
+  color: white;
+}
 .login img {
   height: 30px;
+}
+a{
+  text-decoration: none;
+  color: hotpink;
+  font: bold;
+  font-size: 20px;
+  padding: 10px;
 }

@@ -23,7 +23,7 @@ function create(req, res){
         if (err) return res.render('venue/new');
         console.log(venue);
         
-        res.redirect('/venues/new');
+        res.redirect('/venues/');
     });
 }
 
