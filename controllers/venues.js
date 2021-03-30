@@ -2,10 +2,19 @@ const Venue = require('../models/venue')
 
 module.exports = {
     index,
+    show,
     new: newVenue,
-    create
+    create,
+    
+
     
 };
+
+function show(req, res){
+    Venue.find({}, function(err, venues) {
+        res.render('venues/show', {venues} );
+    });
+}
 
 function index(req, res){
     Venue.find({}, function(err, venues) {
