@@ -3,14 +3,23 @@ const Venue = require('../models/venue')
 module.exports = {
     index,
     new: newVenue,
-    create
+    create,
+    show
     
 
     
 };
 
+//iif a venue has been already entered dont allow
+//create a review tying it to user and venue 
 
 
+function show(req, res){
+    Venue.find({}, function(err, venues) {
+        res.render('venues/show', {venues} );
+    });
+
+}
 function index(req, res){
     Venue.find({}, function(err, venues) {
         res.render('venues/index', {venues} );

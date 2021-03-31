@@ -11,7 +11,8 @@ router.get('/new', isLoggedIn, venuesCtrl.new);
 
 // post/venues
 router.post('/', isLoggedIn, venuesCtrl.create);
-
+// get /venues/:id
+router.get('/:id', isLoggedIn, venuesCtrl.show);
 
 
 
