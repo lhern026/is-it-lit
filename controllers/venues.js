@@ -15,11 +15,17 @@ module.exports = {
 
 
 function show(req, res){
-    Venue.find({}, function(err, venues) {
-        res.render('venues/show', {venues} );
+    Venue.findById(req.params.id)
+  .populate('venue').exec(function(err, venue) 
+     {
+         
+        res.render('venues/show', {venue} );
     });
 
 }
+
+
+
 function index(req, res){
     Venue.find({}, function(err, venues) {
         res.render('venues/index', {venues} );
