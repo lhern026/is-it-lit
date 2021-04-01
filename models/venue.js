@@ -3,9 +3,12 @@ const Schema = mongoose.Schema;
 
 
 const reviewSchema = new Schema({
-    content: String,
-    rating: {type: Number, min: 1, max: 5, default: 5},
+    experience: String,
+    averagePrice: Number,
+    rating: {type: Number, min: 1, max: 10, default: 5},
     user: {type: Schema.Types.ObjectId, ref: 'User'},
+    username: String,
+    userAvatar: String
     
   }, {
     timestamps: true
@@ -27,3 +30,10 @@ const venueSchema = new Schema({
 
 
 module.exports = mongoose.model('Venue', venueSchema);
+
+
+// make sure all data is being sent specific to the venue
+//create review isworking 
+//diplay review
+//edit reviews
+//delete reviews

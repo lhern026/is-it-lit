@@ -33,16 +33,16 @@ function index(req, res){
 }
 
 function newVenue(req, res){
-    res.render('venues/new')
+    res.render('venues/new');
 }
 
 function create(req, res){
     const venue = new Venue(req.body);
     venue.save(function(err){
-        if (err) return res.render('venue/new');
-        console.log(venue);
+        if (err) return res.render('venue/new', {venues});
         
-        res.redirect('/venues/');
+        
+        res.redirect(`/venues/${venue._id}`);
     });
 }
 

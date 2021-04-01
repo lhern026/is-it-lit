@@ -1,13 +1,6 @@
 <%- include('../partials/header') %>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-  <title>See Soccer Live</title>
-</head>
+
+
 <section id="show-page">
     <div>Stadium Name: </div>
     <div><%= venue.stadiumName %></div>
@@ -17,12 +10,54 @@
     <div><%= venue.hostTeam %></div>
     <div>Capacity: </div>
     <div><%= venue.capacity %></div>
+    <form action="../venues/<%= venue._id %>/reviews" method="POST" id="add-review-form">
+        <label >Experience:</label>
+        <textarea name="experience" ></textarea>
+        <label >Average price:</label>
+        <textarea name="averagePrice" type="number"></textarea>
+        
+        <label >Rating:</label>
+        <select name="rating" id="">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <input type="submit" value="add review">
+    
+    </form>
+</section>
+    <!-- I want to display each review in the array -->
+<section>
+    <table>
+        <thead>
+            <tr>
+                <th>Experience</th>
+                <th>Average price</th>
+                <th>Rating</th>
+                <th>User</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- ive got a bug here links randomize -->
+            <% venue.reviews.forEach(function(review){ %>  
+                <tr>
+                    <td><%= review.experience     %></td>
+                    <td><%= review.averagePrice      %></td>
+                    <td><%= review.rating     %></td>
+                    <!--weve got a bug user is not displaying -->
+                    <td class="reviewUser"  ><img src="<%= review.userAvatar %>" > <%= review.user      %></td>
+                </tr>
+                <% }); %>
+        </tbody>
 
-    <!--make sure they render-->
-    
-    
-  </section>
-</html>
+    </table>
+</section>
+
+
+
+
 
 <%- include('../partials/footer') %>
 
