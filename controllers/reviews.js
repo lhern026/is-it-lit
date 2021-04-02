@@ -15,7 +15,7 @@ function create(req, res){
         
 
         venue.reviews.push(req.body);
-        console.log(venue.reviews);
+        console.log(req.body);
         
         venue.save(function(err){
             res.redirect(`/venues/${venue._id}`) ;

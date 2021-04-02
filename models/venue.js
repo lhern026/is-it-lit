@@ -7,7 +7,7 @@ const reviewSchema = new Schema({
     averagePrice: Number,
     rating: {type: Number, min: 1, max: 10, default: 5},
     user: {type: Schema.Types.ObjectId, ref: 'User'},
-    username: String,
+    userName: String,
     userAvatar: String
     
   }, {
