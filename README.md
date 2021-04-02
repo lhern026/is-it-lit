@@ -6,8 +6,10 @@ Is it lit is a place where you can post about a new stadium and review a stadium
 
 ### Description : 
 Post a venue and review the venues.
-
+## Screenshots
 ![](https://i.imgur.com/EHkVJvC.jpg))
+![](https://imgur.com/aeE1DFM))
+![](https://imgur.com/4KD9rxM))
 ### Technologies used: Javascript, HTML, CSS.
 
 ### Getting started: 
