@@ -2,14 +2,14 @@
 
 
 <section id="show-page">
-    <div>Stadium Name: </div>
-    <div><%= venue.stadiumName %></div>
-    <div>Location: </div>
-    <div><%= venue.location %></div>
-    <div>Host team: </div>
-    <div><%= venue.hostTeam %></div>
-    <div>Capacity: </div>
-    <div><%= venue.capacity %></div>
+    <h2>Stadium Name: </h2>
+    <h2><%= venue.stadiumName %></h2>
+    <h2>Location: </h2>
+    <h2><%= venue.location %></h2>
+    <h2>Host team: </h2>
+    <h2><%= venue.hostTeam %></h2>
+    <h2>Capacity: </h2>
+    <h2><%= venue.capacity %></h2>
     <form action="../venues/<%= venue._id %>/reviews" method="POST" id="add-review-form">
         <label >Experience:</label>
         <textarea name="experience" ></textarea>

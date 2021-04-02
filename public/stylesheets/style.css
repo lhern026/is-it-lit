@@ -1,31 +1,104 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: lightblue;
+  font-family: 'Kiwi Maru', serif;
+  background-image: url('https://i.imgur.com/3ftUOcr.jpg');
+  font-size: 16px;
+  
+  
+  
+}
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
-}
+
 
 .login {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  
+  
   height: 34px;
   
   
 }
-h1{
+.login,  {
+  color: #F76C5E;
+}
+h1, h2{
   color: white;
+  text-align: center;
+  font-size: 5rem;
 }
 .login img {
   height: 30px;
+  
 }
 a{
   text-decoration: none;
-  color: hotpink;
+  color: black;
   font: bold;
-  font-size: 20px;
+  font-size: 2rem;
   padding: 10px;
+  
+  
+  
+}
+a:hover{
+  text-decoration: none;
+  color: #B4EDD2;
+  font: bold;
+  font-size: 1.4rem;
+  
+  padding: 10px;
+  
+}
+
+nav{
+  display: flex;
+  background: #8D94BA;
+  width: 88vw;
+  display: flex;
+}
+.banner{
+  
+  width: 100vw;
+  background: black;
+  
+  
+}
+.bvb{
+  width: 80vw;
+  height: 60vh;
+  display: center;
+  
+  
+}
+.table{
+  border-collapse: collapse;
+  box-shadow: 0 0 10px #A0CFD3;
+  width: 80vw;
+  
+
+}
+.table th,td{
+  padding: 10px;
+  font: sans-serif;
+  color: #B4EDD2;
+  font-size: 2rem;
+}
+.table th{
+  color: B4EDD2;
+}
+form  {
+  width:50vw;
+  padding:20%;
+}
+#show-page > div{
+  color: #B4EDD2;
+}
+td >a{
+  color: #B4EDD2;
+}
+label{
+  color: #B4EDD2;
 }

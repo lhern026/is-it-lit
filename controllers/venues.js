@@ -4,7 +4,11 @@ module.exports = {
     index,
     new: newVenue,
     create,
-    show
+    show,
+    // update
+    
+    
+
     
 
     
@@ -12,7 +16,7 @@ module.exports = {
 
 //iif a venue has been already entered dont allow
 //create a review tying it to user and venue 
-
+//update venue
 
 function show(req, res){
     Venue.findById(req.params.id)
@@ -46,3 +50,6 @@ function create(req, res){
     });
 }
 
+// function update(req, res){
+//     console.log(Venue);
+// }

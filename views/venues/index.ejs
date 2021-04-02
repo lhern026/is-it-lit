@@ -10,7 +10,7 @@
 </head>
 <body>
   <h1>Venue List</h1>
-  <table>
+  <table class='table'>
     <thead>
       <tr>
         
@@ -31,7 +31,11 @@
           <td><%= v.hostTeam %></td>
           <td><%= v.capacity %></td>
           <!-- bug here brother  -->
-          <td><a href="/venues/<%= v._id %>">venue</a></td>
+          <td><a href="/venues/<%= v._id %>">show venue</a></td>
+          <td><a href="/venues/<%= v._id %>">delete venue</a></td>
+          
+
+
           
           
         </tr>

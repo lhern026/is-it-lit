@@ -13,6 +13,12 @@ router.get('/:id', isLoggedIn, venuesCtrl.show);
 // post/venues
 router.post('/', isLoggedIn, venuesCtrl.create);
 
+// //put /venues/:id
+// router.put('/:id', isLoggedIn, venuesCtrl.update);
+
+//delete /venues/:id 
+
+
 
 
 
