@@ -40,14 +40,14 @@
             </tr>
         </thead>
         <tbody>
-            <!-- ive got a bug here links randomize -->
+            
             <% venue.reviews.forEach(function(review){ %>  
                 <tr>
                     <td><%= review.experience     %></td>
                     <td><%= review.averagePrice      %></td>
                     <td><%= review.rating     %></td>
                     <!--weve got a bug user is not displaying -->
-                    <td class="reviewUser"  ><img src="<%= review.userAvatar %>" > <%= review.user      %></td>
+                    <td class="reviewUser"  ><img src="<%= review.userAvatar %>" > <%= review.user %></td>
                 </tr>
                 <% }); %>
         </tbody>
