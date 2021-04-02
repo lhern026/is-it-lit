@@ -17,6 +17,7 @@ router.post('/', isLoggedIn, venuesCtrl.create);
 // router.put('/:id', isLoggedIn, venuesCtrl.update);
 
 //delete /venues/:id 
+router.delete('/:id', isLoggedIn, venuesCtrl.delete);
 
 
 

@@ -20,6 +20,9 @@ const venueSchema = new Schema({
     location: String,
     hostTeam: String,
     capacity: Number,
+    user: {type: Schema.Types.ObjectId, ref: 'User'},
+    
+    
     
     reviews: [reviewSchema]
     
