@@ -18,7 +18,6 @@ module.exports = {
 
 //iif a venue has been already entered dont allow
 //create a review tying it to user and venue 
-//update venue
 
 function deleteVenue(req, res){
     req.params.id = req.params.user;

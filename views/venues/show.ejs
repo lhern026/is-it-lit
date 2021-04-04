@@ -13,8 +13,7 @@
     <form action="../venues/<%= venue._id %>/reviews" method="POST" id="add-review-form">
         <label >Experience:</label>
         <textarea name="experience" ></textarea>
-        <label >Average price:</label>
-        <textarea name="averagePrice" type="number"></textarea>
+        
         
         <label >Rating:</label>
         <select name="rating" id="">
@@ -24,7 +23,7 @@
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
-        <input type="submit" value="add review">
+        <input type="submit" value="add experience">
     
     </form>
 </section>
@@ -44,7 +43,7 @@
             <% venue.reviews.forEach(function(review){ %>  
                 <tr>
                     <td><%= review.experience     %></td>
-                    <td><%= review.averagePrice      %></td>
+                    
                     <td><%= review.rating     %></td>
                     <!--weve got a bug user is not displaying -->
                     <td class="reviewUser"  ><img src="<%= review.userAvatar %>" > <%= review.user %></td>
