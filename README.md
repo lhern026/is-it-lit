@@ -10,7 +10,7 @@ Post a venue and review the venues.
 ![](https://i.imgur.com/EHkVJvC.jpg))
 ![](https://imgur.com/aeE1DFM))
 ![](https://imgur.com/4KD9rxM))
-### Technologies used: Javascript, HTML, CSS.
+### Technologies used: Javascript, HTML, CSS,MongoDb, Express,nodeJs,Mongoose
 
 ### Getting started: 
 | [Game Link](https://is-it-lit-sei.herokuapp.com/)
