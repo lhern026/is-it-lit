@@ -21,8 +21,6 @@ const venueSchema = new Schema({
     capacity: Number,
     user: {type: Schema.Types.ObjectId, ref: 'User'},
     
-    
-    
     reviews: [reviewSchema]
     
 

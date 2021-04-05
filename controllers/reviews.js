@@ -14,11 +14,9 @@ module.exports = {
 function update(req,res){
     Venue.findOne({'reviews._id': req.params.id}).then(function(venue){
         let review = venue.reviews.id(req.params.id);
-
-
         Object.assign(review, req.body);
         venue.save(function(err){
-            res.redirect(`/venues`);
+            res.redirect(`/venues/${venue._id}`);
         })
     })
 }
@@ -53,12 +51,7 @@ function create(req, res){
         req.body.user = req.user._id;
         req.body.userName = req.user.name;
         req.body.userAvatar = req.user.avatar;
-        
-        
-
         venue.reviews.push(req.body);
-        
-        
         venue.save(function(err){
             res.redirect(`/venues/${venue._id}`) ;
             

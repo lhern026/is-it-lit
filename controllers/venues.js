@@ -5,15 +5,7 @@ module.exports = {
     new: newVenue,
     create,
     show,
-    // update
-
-
-    
-    
-
-    
-
-    
+       
 };
 
 //iif a venue has been already entered dont allow
@@ -52,6 +44,3 @@ function create(req, res){
     });
 }
 
-// function update(req, res){
-//     console.log(Venue);
-// }

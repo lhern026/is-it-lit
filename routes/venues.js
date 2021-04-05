@@ -19,11 +19,4 @@ router.post('/', isLoggedIn, venuesCtrl.create);
 
 
 
-
-
-
-
-
-
-
 module.exports = router;
