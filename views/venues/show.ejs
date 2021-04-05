@@ -29,13 +29,14 @@
 </section>
     <!-- I want to display each review in the array -->
 <section>
-    <table>
+    <table class="table"> 
         <thead>
             <tr>
                 <th>Experience</th>
-                <th>Average price</th>
+                
                 <th>Rating</th>
                 <th>User</th>
+                <th>delete comment</th>
             </tr>
         </thead>
         <tbody>
@@ -47,6 +48,13 @@
                     <td><%= review.rating     %></td>
                     <!--weve got a bug user is not displaying -->
                     <td class="reviewUser"  ><img src="<%= review.userAvatar %>" > <%= review.user %></td>
+                    <td>
+                        <% if (user && user._id.equals(review.user)) { %>
+                        <form action="/reviews/<%= review._id %>?_method=DELETE" method="POST">
+                        <button type="submit">X</button>
+                      </form>
+                      <% } %>
+                    </td>
                 </tr>
                 <% }); %>
         </tbody>

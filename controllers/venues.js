@@ -6,7 +6,7 @@ module.exports = {
     create,
     show,
     // update
-    delete: deleteVenue
+
 
     
     
@@ -19,17 +19,6 @@ module.exports = {
 //iif a venue has been already entered dont allow
 //create a review tying it to user and venue 
 
-function deleteVenue(req, res){
-    req.params.id = req.params.user;
-    Venue.findById(req.params.id).then(function(venue){
-        if (!venue.user.equals(req.user._id)) return res.redirect('venues/show');
-        venue.findByIdandDelete(req.params.id, function(err){
-            res.redirect('venues');
-
-        })
-    })
-
-}
 
 function show(req, res){
     Venue.findById(req.params.id)

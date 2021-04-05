@@ -2,10 +2,32 @@ const Venue = require('../models/venue')
 
 module.exports = {
     create,
+    delete: deleteReview
+    
+
     
 
     
 };
+
+
+
+function deleteReview(req, res, next){
+    Venue.findOne({'reviews._id': req.params.id}).then(function(venue){
+        const review = venue.reviews.id(req.params.id);
+        console.log(review);
+        if (!review.user.equals(req.user._id)) return res.redirect(`/venues/${venues._id}`);
+        review.remove();
+        venue.save().then(function() {
+            res.redirect(`/venues/${venue._id}`);
+          }).catch(function(err) {
+              return next(err)
+            });
+        });
+  
+}
+
+
 function create(req, res){
     Venue.findById(req.params.id, function(err, venue){
         req.body.user = req.user._id;
