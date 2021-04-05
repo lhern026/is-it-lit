@@ -2,12 +2,32 @@ const Venue = require('../models/venue')
 
 module.exports = {
     create,
-    delete: deleteReview
+    delete: deleteReview,
+    update,
+    edit
     
 
     
 
     
+};
+function update(req,res){
+    Venue.findOne({'reviews._id': req.params.id}).then(function(venue){
+        let review = venue.reviews.id(req.params.id);
+
+
+        Object.assign(review, req.body);
+        venue.save(function(err){
+            res.redirect(`/venues`);
+        })
+    })
+}
+function edit(req,res){
+    Venue.findOne({'reviews._id': req.params.id}).then(function(venue){
+        let review = venue.reviews.id(req.params.id);
+
+        res.render('reviews/reviewEdit', {title: "edit review", review});
+});
 };
 
 
