@@ -17,7 +17,8 @@ Post a venue and review the venues.
 [trello link](https://trello.com/b/hRJS7cRO/isitlit-user-stories)
 
 ## Icebox items
-I would like to seed 10 popular venues.
-I would like to add a section where users can add Local soccer fields.
-I would like to allow for users to enter pictures.
+|I would like to seed 10 popular venues.
+
+|I would like to add a section where users can add Local soccer fields.
+|I would like to allow for users to enter pictures.
 
