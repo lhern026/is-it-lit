@@ -1,7 +1,7 @@
 body {
-  padding: 50px;
+  padding: 1rem;
   font-family: "Kiwi Maru", serif;
-
+  background-color: black;
   font-size: 16px;
 }
 *,
@@ -10,21 +10,18 @@ body {
   box-sizing: border-box;
 }
 button {
-  border-width: 1em;
+  border-width: 0.5em;
   border-style: solid;
   border-image: linear-gradient(to right, darkblue, darkorchid) 1;
-
-  margin: auto;
-  justify-content: center;
-}
-.login {
+  border-radius: 30px;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  margin: auto;
+}
 
-  height: 34px;
-}
-.login {
-  color: #f76c5e;
-}
 h1 {
   color: #a0cfd3;
   text-align: center;
@@ -52,10 +49,10 @@ a:hover {
 }
 
 nav {
-  display: flex;
   background: #8d94ba;
   width: 88vw;
   display: flex;
+  margin: auto;
 }
 
 .table {
