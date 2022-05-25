@@ -7,8 +7,17 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>Is it lit</h1>
+    <h1>ISITLIT </h1>
+    
+    <% if (user) { %>
+          
+      <button class="reset btn-gradient-1"><a href="/logout">LOG OUT</a></button>
+    <% } else { %>
+      <button class="reset btn-gradient-1"><a href="/auth/google" class="login">LOGIN</a></button>
+    <% } %>
     <div class="banner">
+
+      
     
       
     

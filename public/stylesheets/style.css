@@ -1,109 +1,94 @@
 body {
   padding: 50px;
-  font-family: 'Kiwi Maru', serif;
-  background-image: url('https://i.imgur.com/3ftUOcr.jpg');
+  font-family: "Kiwi Maru", serif;
+
   font-size: 16px;
-  
-  
-  
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
+button {
+  border-width: 1em;
+  border-style: solid;
+  border-image: linear-gradient(to right, darkblue, darkorchid) 1;
 
-
-
+  margin: auto;
+  justify-content: center;
+}
 .login {
   display: flex;
-  
-  
+
   height: 34px;
-  
-  
 }
-.login  {
-  color: #F76C5E;
+.login {
+  color: #f76c5e;
 }
-h1{
-  color: #A0CFD3;
+h1 {
+  color: #a0cfd3;
   text-align: center;
   font-size: 5rem;
 }
- h2{
+h2 {
   color: white;
   text-align: center;
-  font-size: 5rem;
+  font-size: 3rem;
 }
 .login img {
   height: 30px;
-  
 }
-a{
+a {
   text-decoration: none;
   color: black;
   font: bold;
-  font-size: 2rem;
+  font-size: 1rem;
   padding: 10px;
-  
-  
-  
 }
-a:hover{
+a:hover {
   text-decoration: none;
-  color: #B4EDD2;
+  color: black;
   font: bold;
-  font-size: 1.4rem;
-  
-  padding: 10px;
-  
 }
 
-nav{
+nav {
   display: flex;
-  background: #8D94BA;
+  background: #8d94ba;
   width: 88vw;
   display: flex;
 }
-.banner{
-  
-  width: 100vw;
-  background: black;
-  
-  
-}
-.bvb{
-  width: 80vw;
-  height: 60vh;
-  display: center;
-  
-  
-}
-.table{
-  border-collapse: collapse;
-  box-shadow: 0 0 10px #A0CFD3;
-  width: 80vw;
-  
 
+.table {
+  border-collapse: collapse;
+  box-shadow: 0 0 10px #a0cfd3;
+  width: 80vw;
 }
-.table th,td{
-  padding: 10px;
+.table th,
+td {
+  padding: 1px;
   font: sans-serif;
-  color: #B4EDD2;
-  font-size: 2.5rem;
+  color: #b4edd2;
+  font-size: 1rem;
 }
-.table th{
+.table th {
   color: B4EDD2;
 }
-form  {
-  width:50vw;
-  padding:20%;
+table,
+.table {
+  background-color: red;
+  width: 80vw;
+  margin: auto;
 }
-#show-page > div{
-  color: #B4EDD2;
+form {
+  width: 5vw;
+  padding: 10%;
 }
-td >a{
-  color: #B4EDD2;
+#show-page > div {
+  color: #b4edd2;
 }
-label{
-  color: #B4EDD2;
+td > a {
+  color: #b4edd2;
+}
+label {
+  color: #b4edd2;
 }
