@@ -36,8 +36,8 @@
                 
                 <th>Rating</th>
                 <th>User</th>
-                <th>delete comment</th>
-                <th> Edit comment</th>
+                <th></th>
+                <th> </th>
             </tr>
         </thead>
         <tbody>
@@ -54,13 +54,14 @@
                         <form action="/reviews/<%= review._id %>?_method=DELETE" method="POST">
                         <button type="submit">X</button>
                       </form>
-                      <% } %>
+                      
                     </td>
                     
                          <td>
                             <form action="/reviews/<%= review._id %>/edit" method="GET">
                             <button type="submit" >Edit</button>
                             </form>
+                            <% } %>
                          </td>
 
                            <% }) %>
