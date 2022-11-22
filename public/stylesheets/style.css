@@ -123,3 +123,50 @@ td > a {
 label {
   color: #b4edd2;
 }
+HTML CSSResult Skip Results Iframe
+/*
+Inspired by Joshua Comeau and Adam Argyle:
+https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/
+https://codepen.io/argyleink/pen/LYEegOO
+*/
+
+:root {
+  color-scheme: dark;
+  font-family: sans-serif;
+  padding: 1rem;
+}
+
+/* ----------------------  */
+form {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.name,
+.email {
+  flex-grow: 99;
+}
+
+button {
+  flex-grow: 1;
+}
+/* ----------------------  */
+
+input,
+button {
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  border-style: solid;
+}
+
+input {
+  padding: 0.5rem;
+  min-width: 0;
+}
+
+button {
+  color-scheme: light;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+}
