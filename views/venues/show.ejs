@@ -1,76 +1,84 @@
 <%- include('../partials/header') %>
 
 
-<section id="show-page">
-    <h2>Stadium Name: </h2>
-    <h2><%= venue.stadiumName %></h2>
-    <h2>Location: </h2>
-    <h2><%= venue.location %></h2>
-    <h2>Host team: </h2>
-    <h2><%= venue.hostTeam %></h2>
-    <h2>Capacity: </h2>
-    <h2><%= venue.capacity %></h2>
-    <form action="../venues/<%= venue._id %>/reviews" method="POST" id="add-review-form">
-        <label >Experience:</label>
-        <textarea name="experience" ></textarea>
-        
-        
-        <label >Rating:</label>
-        <select name="rating" id="">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
-        <input type="submit" value="add experience">
-    
-    </form>
-</section>
+    <section id="show-page">
+        <h2>Stadium Name: </h2>
+        <h2>
+            <%= venue.stadiumName %>
+        </h2>
+        <h2>Location: </h2>
+        <h2>
+            <%= venue.location %>
+        </h2>
+        <h2>Host team: </h2>
+        <h2>
+            <%= venue.hostTeam %>
+        </h2>
+        <h2>Capacity: </h2>
+        <h2>
+            <%= venue.capacity %>
+        </h2>
+        <form action="../venues/<%= venue._id %>/reviews" method="POST" id="add-review-form">
+            <label>Experience:</label>
+            <textarea name="experience"></textarea>
+
+
+            <label>Rating:</label>
+            <select name="rating" id="">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <input type="submit" value="add experience">
+
+        </form>
+    </section>
     <!-- I want to display each review in the array -->
-<section>
-    <table class="table"> 
-        <thead>
-            <tr>
-                <th>Experience</th>
-                
-                <th>Rating</th>
-                <th>User</th>
-                <th></th>
-                <th> </th>
-            </tr>
-        </thead>
-        <tbody>
-            
-            <% venue.reviews.forEach(function(review){ %>  
+    <section>
+        <table class="table">
+            <thead>
                 <tr>
-                    <td><%= review.experience     %></td>
-                    
-                    <td><%= review.rating     %></td>
-                    <!--weve got a bug user is not displaying -->
-                    <td class="reviewUser"  ><img src="<%= review.userAvatar %>" > <%= review.user %></td>
-                    <td>
-                        <% if (user && user._id.equals(review.user)) { %>
-                        <form action="/reviews/<%= review._id %>?_method=DELETE" method="POST">
-                        <button type="submit">X</button>
-                      </form>
-                      
-                    </td>
-                    
-                         <td>
+                    <th>Experience</th>
+
+                    <th>Rating</th>
+                    <th>User</th>
+                    <th></th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <% venue.reviews.forEach(function(review){ %>
+                    <tr>
+                        <td>
+                            <%= review.experience %>
+                        </td>
+
+                        <td>
+                            <%= review.rating %>
+                        </td>
+                        
+                        <td class="reviewUser"><img src="<%= review.userAvatar %>">
+                            <%= review.userName %>
+                        </td>
+                        <td>
+                            <% if (user && user._id.equals(review.user)) { %>
+                                <form action="/reviews/<%= review._id %>?_method=DELETE" method="POST">
+                                    <button type="submit">X</button>
+                                </form>
+
+                        </td>
+
+                        <td>
                             <form action="/reviews/<%= review._id %>/edit" method="GET">
-                            <button type="submit" >Edit</button>
+                                <button type="submit">Edit</button>
                             </form>
                             <% } %>
-                         </td>
+                        </td>
 
-                           <% }) %>
-
-
-
-
-
-                    
+                        <% }) %>
 
 
 
@@ -78,22 +86,21 @@
 
 
 
-                </tr>
-                
-        </tbody>
-
-    </table>
-</section>
-
-
-
-
-
-<%- include('../partials/footer') %>
 
 
 
 
 
 
+                    </tr>
 
+            </tbody>
+
+        </table>
+    </section>
+
+
+
+
+
+    <%- include('../partials/footer') %>

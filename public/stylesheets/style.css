@@ -72,13 +72,17 @@ td {
 }
 table,
 .table {
-  background-color: red;
+  background-color: purple;
   width: 80vw;
   margin: auto;
 }
 form {
-  width: 5vw;
-  padding: 10%;
+  min-width: 1rem;
+  padding: 7%;
+  text-align: center;
+  margin: auto;
+
+  background: purple;
 }
 #show-page > div {
   color: #b4edd2;
