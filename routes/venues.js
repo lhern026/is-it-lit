@@ -1,22 +1,19 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const venuesCtrl = require('../controllers/venues');
-const isLoggedIn = require('../config/auth');
+const venuesCtrl = require("../controllers/venues");
+const isLoggedIn = require("../config/auth");
 
 //get /venues
-router.get('/', venuesCtrl.index);
+router.get("/", venuesCtrl.index);
 
 /* GET /venues/new */
-router.get('/new', isLoggedIn, venuesCtrl.new);
+router.get("/new", isLoggedIn, venuesCtrl.new);
 // get /venues/:id
-router.get('/:id', isLoggedIn, venuesCtrl.show);
+router.get("/:id", isLoggedIn, venuesCtrl.show);
 // post/venues
-router.post('/', isLoggedIn, venuesCtrl.create);
+router.post("/", isLoggedIn, venuesCtrl.create);
 
 // //put /venues/:id
 // router.put('/:id', isLoggedIn, venuesCtrl.update);
-
-
-
 
 module.exports = router;
